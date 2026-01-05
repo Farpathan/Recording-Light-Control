@@ -42,3 +42,6 @@ captures/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Release Files
+app/release

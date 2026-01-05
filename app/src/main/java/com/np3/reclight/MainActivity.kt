@@ -531,7 +531,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 
                 FilledTonalButton(
                     onClick = {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/"))
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Farpathan/Recording-Light-Control"))
                         context.startActivity(intent)
                     }
                 ) {

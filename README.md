@@ -10,7 +10,7 @@ Recording Light Control gives precise control over the Nothing Phone (3)'s recor
 
 ## Download
 
-You can find the latest APK in the [Releases](https://github.com/yourusername/RecordingLightControl/releases) section.
+You can find the latest APK in the [Releases](https://github.com/Farpathan/Recording-Light-Control/releases) section.
 
 ## Credits
 
