@@ -505,7 +505,8 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 modifier = Modifier
                     .padding(24.dp)
                     .fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = "Recording Light Control",
@@ -513,7 +514,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                     fontWeight = FontWeight.Bold
                 )
                 Text(
-                    text = "v1.0.0",
+                    text = "v1.0",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -521,7 +522,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Spacer(modifier = Modifier.height(16.dp))
                 
                 Text(
-                    text = "Control the dedicated red recording LED on your Nothing Phone (3). Requires Root or Shizuku.",
+                    text = "Control the Recording LED on your Nothing Phone (3). Requires Root or Shizuku.",
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     style = MaterialTheme.typography.bodyMedium
                 )
