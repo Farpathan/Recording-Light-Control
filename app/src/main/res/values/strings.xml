@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recording Light</string>
+    <string name="tile_label">Rec Light</string>
+    <string name="widget_description">Toggle recording light</string>
+</resources>
