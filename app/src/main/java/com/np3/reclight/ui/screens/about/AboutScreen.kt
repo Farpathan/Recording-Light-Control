@@ -78,7 +78,7 @@ fun AboutScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 StatusBadge(
-                    text = "v1.1",
+                    text = "v1.1.0",
                     type = StatusType.NEUTRAL
                 )
                 
