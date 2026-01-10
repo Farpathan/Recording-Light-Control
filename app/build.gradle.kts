@@ -12,8 +12,8 @@ android {
         applicationId = "com.np3.reclight"
         minSdk = 34
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         vectorDrawables {
             useSupportLibrary = true
@@ -72,6 +72,9 @@ dependencies {
     implementation(libs.androidx.glance)
     implementation(libs.androidx.glance.appwidget)
     implementation(libs.androidx.glance.material3)
+    
+    // Navigation Compose
+    implementation(libs.androidx.navigation.compose)
     
     debugImplementation(libs.androidx.ui.tooling)
 }
