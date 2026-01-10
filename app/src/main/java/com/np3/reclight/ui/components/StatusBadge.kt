@@ -43,29 +43,3 @@ fun StatusBadge(
         )
     }
 }
-
-@Composable
-fun StatusIndicator(
-    isActive: Boolean,
-    activeText: String = "Active",
-    inactiveText: String = "Inactive",
-    modifier: Modifier = Modifier
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
-    ) {
-        Box(
-            modifier = Modifier
-                .size(8.dp)
-                .clip(RoundedCornerShape(4.dp))
-                .background(if (isActive) StatusSuccess else StatusError)
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        Text(
-            text = if (isActive) activeText else inactiveText,
-            style = MaterialTheme.typography.bodySmall,
-            color = if (isActive) StatusSuccess else StatusError
-        )
-    }
-}

@@ -322,21 +322,13 @@ fun HomeScreen() {
 
 @Composable
 private fun HeroSection() {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(24.dp))
-            .background(
-                Brush.linearGradient(
-                    colors = listOf(
-                        MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
-                        MaterialTheme.colorScheme.surfaceVariant
-                    )
-                )
-            )
-            .padding(24.dp)
+    GradientBox(
+        modifier = Modifier.fillMaxWidth(),
+        cornerRadius = 24.dp
     ) {
-        Column {
+        Column(
+            modifier = Modifier.padding(24.dp)
+        ) {
             // Dot pattern decoration
             Row(
                 horizontalArrangement = Arrangement.spacedBy(6.dp)

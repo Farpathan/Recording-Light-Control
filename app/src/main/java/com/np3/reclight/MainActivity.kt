@@ -162,6 +162,8 @@ fun MainApp(
 
 @Composable
 fun FirstLaunchDialog(onDismiss: () -> Unit) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    
     Dialog(onDismissRequest = onDismiss) {
         Card(
             shape = RoundedCornerShape(24.dp),
@@ -178,6 +180,16 @@ fun FirstLaunchDialog(onDismiss: () -> Unit) {
                     style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface
+                )
+                
+                Spacer(modifier = Modifier.height(12.dp))
+                
+                // Device support notice
+                Text(
+                    text = "⚠️ Currently supports Nothing Phone (3) only",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    textAlign = TextAlign.Center
                 )
                 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -208,13 +220,37 @@ fun FirstLaunchDialog(onDismiss: () -> Unit) {
                     )
                 }
                 
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(16.dp))
                 
                 Text(
                     text = "Grant permission using either method to control the LED.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                     textAlign = TextAlign.Center
+                )
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                
+                // Open source notice
+                Text(
+                    text = "This project is open source",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center
+                )
+                
+                Text(
+                    text = "github.com/Farpathan/Recording-Light-Control",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.clickable {
+                        val intent = android.content.Intent(
+                            android.content.Intent.ACTION_VIEW,
+                            android.net.Uri.parse("https://github.com/Farpathan/Recording-Light-Control")
+                        )
+                        context.startActivity(intent)
+                    }
                 )
                 
                 Spacer(modifier = Modifier.height(20.dp))

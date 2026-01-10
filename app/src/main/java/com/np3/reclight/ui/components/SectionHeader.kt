@@ -22,7 +22,6 @@ fun SectionHeader(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier.fillMaxWidth()
     ) {
-        // Dot accent
         Box(
             modifier = Modifier
                 .size(8.dp)
@@ -41,7 +40,6 @@ fun SectionHeader(
         
         Spacer(modifier = Modifier.width(12.dp))
         
-        // Line accent - dot matrix inspired
         Row(
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             modifier = Modifier.weight(1f)
@@ -58,17 +56,4 @@ fun SectionHeader(
             }
         }
     }
-}
-
-@Composable
-fun SectionHeaderSimple(
-    title: String,
-    modifier: Modifier = Modifier
-) {
-    Text(
-        text = title,
-        style = MaterialTheme.typography.titleMedium,
-        color = MaterialTheme.colorScheme.onBackground,
-        modifier = modifier
-    )
 }

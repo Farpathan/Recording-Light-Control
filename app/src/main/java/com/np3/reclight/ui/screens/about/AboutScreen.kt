@@ -1,6 +1,5 @@
 package com.np3.reclight.ui.screens.about
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
@@ -16,7 +15,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -24,7 +22,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.np3.reclight.R
 import com.np3.reclight.ui.components.*
-import com.np3.reclight.ui.theme.*
 
 @Composable
 fun AboutScreen(
@@ -43,26 +40,16 @@ fun AboutScreen(
     ) {
         Spacer(modifier = Modifier.height(60.dp))
         
-        // Hero section
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(24.dp))
-                .background(
-                    Brush.linearGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
-                            MaterialTheme.colorScheme.surfaceVariant
-                        )
-                    )
-                )
-                .padding(32.dp),
-            contentAlignment = Alignment.Center
+        // Hero section with animated gradient
+        GradientBox(
+            modifier = Modifier.fillMaxWidth(),
+            cornerRadius = 24.dp
         ) {
             Column(
+                modifier = Modifier.padding(32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // App icon placeholder
+                // App icon
                 Box(
                     modifier = Modifier
                         .size(80.dp)
@@ -137,7 +124,7 @@ fun AboutScreen(
             SettingsItem(
                 title = "GitHub Repository",
                 subtitle = "View source code",
-                icon = null, // Using custom icon via painterResource
+                icon = null,
                 onClick = {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Farpathan/Recording-Light-Control"))
                     context.startActivity(intent)
